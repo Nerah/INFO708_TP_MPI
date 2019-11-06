@@ -1,6 +1,6 @@
 # MPI-2
 
-## Pour bien débuter
+## Pour bien débuter avec C++
 
 Dépendance LINUX à télécharger pour compiler du C++ utilisant MPI:
 > `sudo apt install libopenmpi-dev`
