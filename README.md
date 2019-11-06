@@ -26,9 +26,9 @@ Il est donc nécessaire de créer un makefile dans chacun de nos dossiers. On pr
 
 #### Exemple avec un programme C++
 
-On va reprendre l'exemple du programme [ping_pong](C++\send_and_receive).
+On va reprendre l'exemple du programme [ping_pong](C++/send_and_receive).
 
-- On a créé un fichier [ping_pong.cpp](C++\send_and_receive\ping_pong.cpp).
-- On a créé un [makefile](C++\send_and_receive\makefile).
+- On a créé un fichier [ping_pong.cpp](C++/send_and_receive/ping_pong.cpp).
+- On a créé un [makefile](C++/send_and_receive/makefile).
 - On a ajouté les informations associées à ce dossier dans [run.py](run.py), dans programs.
 - On exécute [run.py](run.py): `./run.py ping_pong`
