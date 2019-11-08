@@ -10,6 +10,7 @@ import subprocess
 # La liste des programmes ( <executable> : (<emplacement>, <nb_processus_a_lancer>) )
 programs = {
     "c++" : {
+        'premier_prog': ('C++/premier_programme_c++_mpi', 5),
         'ping_pong': ('C++/send_and_receive', 2),
     },
     "python" : {
@@ -36,6 +37,7 @@ else:
             subprocess.call(
                 ['cd ./{0}/ && make'.format(programs[langage][program_to_run][0])],
                 stdout=devnull, stderr=subprocess.STDOUT, shell=True)
+            print("L'executable {0} a ete genere.".format(programs[langage][program_to_run][0] + '/' + program_to_run))
 
         # Generation de la commande qui sera executee sur la console
 
