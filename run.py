@@ -10,11 +10,11 @@ import subprocess
 # La liste des programmes ( <executable> : (<emplacement>, <nb_processus_a_lancer>) )
 programs = {
     "c++" : {
-        'premier_prog': ('C++/premier_programme_c++_mpi', 5),
+        'premier_prog': ('C++/premier_programme', 5),
         'ping_pong': ('C++/send_and_receive', 2),
     },
     "python" : {
-        'premier_prog': ('Python/premier_programme_python_mpi', 5),
+        'premier_prog': ('Python/premier_programme', 5),
     }
 }
 

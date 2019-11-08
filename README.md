@@ -14,9 +14,9 @@ Il est donc nécessaire de créer un makefile dans chacun de nos dossiers. On pr
 
 ##### Premier programme
 
-On va reprendre l'exemple du programme [premier_prog](C++/premier_programme_c++_mpi).
-- On a créé un fichier [premier_prog](C++/premier_programme_c++_mpi/main.cpp).
-- On a créé un [makefile](C++/premier_programme_c++_mpi/makefile).
+On va reprendre l'exemple du programme [premier_prog](C++/premier_programme).
+- On a créé un fichier [premier_prog](C++/premier_programme/main.cpp).
+- On a créé un [makefile](C++/premier_programme/makefile).
 - On a ajouté les informations associées à ce dossier dans [run.py](run.py), dans programs, pour le langage C++. A noter que l'on peut changer le nombre de processus qui s'exécutent (5 actuellement).
 - On exécute [run.py](run.py): `./run.py c++ premier_prog`
 
@@ -39,8 +39,8 @@ MPI ne propose pas de commande pour compiler un programme Python dans l'environn
 
 ##### Premier programme
 
-On va reprendre l'exemple du programme [premier_prog](Python/premier_programme_python_mpi).
+On va reprendre l'exemple du programme [premier_prog](Python/premier_programme).
 
-- On a créé un fichier [premier_prog.py](Python/premier_programme_python_mpi/premier_prog.py).
+- On a créé un fichier [premier_prog.py](Python/premier_programme/premier_prog.py).
 - On a ajouté les informations associées à ce dossier dans [run.py](run.py), dans programs, pour le langage Python.
 - On exécute [run.py](run.py): `./run.py python premier_prog`
