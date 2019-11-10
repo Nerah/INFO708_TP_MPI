@@ -39,23 +39,17 @@ else:
                 stdout=devnull, stderr=subprocess.STDOUT, shell=True)
             print("L'executable {0} a ete genere.".format(programs[langage][program_to_run][0] + '/' + program_to_run))
 
-        # Generation de la commande qui sera executee sur la console
-
         sys_call = '{0} --allow-run-as-root -n {1} {2} ./{3}/{4}'.format(
             mpirun, programs[langage][program_to_run][1], hosts, programs[langage][program_to_run][0], program_to_run)
 
-        if len(programs[langage][program_to_run]) > 2:
-            sys_call = '{0} {1}'.format(sys_call, ' '.join(programs[langage][program_to_run][2]))
-
-        print(sys_call)
-        subprocess.call([sys_call], shell=True)
     elif langage == "python":
 
         sys_call = '{0} --allow-run-as-root -n {1} {2} python ./{3}/{4}.py'.format(
             mpirun, programs[langage][program_to_run][1], hosts, programs[langage][program_to_run][0], program_to_run)
 
-        if len(programs[langage][program_to_run]) > 2:
-            sys_call = '{0} {1}'.format(sys_call, ' '.join(programs[langage][program_to_run][2]))
+    # Lance la commande generee sur la console
+    if len(programs[langage][program_to_run]) > 2:
+        sys_call = '{0} {1}'.format(sys_call, ' '.join(programs[langage][program_to_run][2]))
 
-        print(sys_call)
-        subprocess.call([sys_call], shell=True)
+    print(sys_call)
+    subprocess.call([sys_call], shell=True)
