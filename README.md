@@ -44,3 +44,11 @@ On va reprendre l'exemple du programme [premier_prog](Python/premier_programme).
 - On a créé un fichier [premier_prog.py](Python/premier_programme/premier_prog.py).
 - On a ajouté les informations associées à ce dossier dans [run.py](run.py), dans programs, pour le langage Python.
 - On exécute [run.py](run.py): `./run.py python premier_prog`
+
+##### Ping pong
+
+On va reprendre l'exemple du programme [ping_pong](Python/send_and_receive).
+
+- On a créé un fichier [ping_pong.py](Python/send_and_receive/ping_pong.py).
+- On a ajouté les informations associées à ce dossier dans [run.py](run.py), dans programs, pour le langage Python.
+- On exécute [run.py](run.py): `./run.py python ping_pong`

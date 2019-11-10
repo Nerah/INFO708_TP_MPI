@@ -27,7 +27,7 @@ int main ( int argc , char * argv[] )
      */
     MPI_Comm_rank( MPI_COMM_WORLD, &myRank) ;
 
-    printf( "I am task %d out o f %d\n", myRank, nbTask ) ;
+    printf( "I am task %d out of %d\n", myRank, nbTask ) ;
     
     // Termine l'exécution de l'environnement MPI.
     MPI_Finalize();

@@ -15,6 +15,7 @@ programs = {
     },
     "python" : {
         'premier_prog': ('Python/premier_programme', 5),
+        'ping_pong': ('Python/send_and_receive', 2),
     }
 }
 

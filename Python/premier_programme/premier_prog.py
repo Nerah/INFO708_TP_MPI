@@ -17,6 +17,9 @@ def main():
     size = comm.Get_size()
     print("I am task " + str(rank) + " out of " + str(size))
 
+    # Termine l'execution de l'environnement MPI.
+    MPI.Finalize()
+
 
 if __name__ == '__main__':
     main()
