@@ -12,10 +12,15 @@ programs = {
     "c++" : {
         'premier_prog': ('C++/premier_programme', 5),
         'ping_pong': ('C++/send_and_receive', 2),
+        'broadcast_prog':('C++/Broadcast',5)
     },
     "python" : {
         'premier_prog': ('Python/premier_programme', 5),
         'ping_pong': ('Python/send_and_receive', 2),
+        'broadcast_prog':('Python/BroadCast', 5),
+        'scattering_prog':('Python/Scattering', 5),
+        'reduction_prog':('Python/Reduction', 5),
+        'gathering_prog':('Python/Gathering', 5)
     }
 }
 
