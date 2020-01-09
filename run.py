@@ -19,6 +19,8 @@ programs = {
         'ping_pong': ('Python/send_and_receive', 2),
         'broadcast_prog':('Python/BroadCast', 5),
         'scattering_prog':('Python/Scattering', 5),
+        'point':('Python/point_to_point', 5),
+        'main':('Python/projet', 3),
         'reduction_prog':('Python/Reduction', 5),
         'gathering_prog':('Python/Gathering', 5)
     }
