@@ -20,7 +20,7 @@ programs = {
         'broadcast_prog':('Python/BroadCast', 5),
         'scattering_prog':('Python/Scattering', 5),
         'point':('Python/point_to_point', 5),
-        'main':('Python/projet', 5),
+        'main':('Python/projet', 6),
         'reduction_prog':('Python/Reduction', 5),
         'gathering_prog':('Python/Gathering', 5)
     }

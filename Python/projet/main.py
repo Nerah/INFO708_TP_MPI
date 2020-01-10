@@ -29,6 +29,8 @@ feu2  = Feu("feu2","vert")
 
 listeVoiture1 = ["voiture 1", "voiture 2", "moto 1", "voiture 3", "voiture 4", "voiture 5", "moto2", "voiture 6"]
 listeVoiture2 = ["voiture 1", "voiture 2", "voiture 3"]
+
+
 def main():
 
     comm = MPI.COMM_WORLD
@@ -42,7 +44,6 @@ def main():
         time.sleep(5)
 
         while 1 :
-
             req1 = comm.isend(1, dest=2, tag=11)  # feu 2 orange
             req1.wait()
             time.sleep(2)
@@ -84,9 +85,19 @@ def main():
 
             req1 = comm.isend(2, dest=2, tag=11)  # feu 2 vert
             req1.wait()
+            time.sleep(1)
 
-            time.sleep(6)
+            req = comm.isend(1, dest=4, tag=2)  # voiture 1
+            req.wait()
+            time.sleep(3)
 
+            req = comm.isend(1, dest=4, tag=2)  # voiture 1
+            req.wait()
+            time.sleep(2)
+
+            req = comm.isend(1, dest=4, tag=2)  # voiture 1
+            req.wait()
+            time.sleep(1)
 
 
 
@@ -133,17 +144,35 @@ def main():
             req = comm.irecv(source=0, tag=1)
             data = req.wait()
             if len(listeVoiture1)!=0:
-                print("le vehicule " + listeVoiture1[0] + "passe")
+                print(" le vehicule ,feu 1 " + listeVoiture1[0] + " passe ")
                 del listeVoiture1[0]
             else :
                 print("pas de voiture au feu")
 
     if rank == 4:
         while 1:
-            req = comm.irecv(source=2, tag=11)
+            req = comm.irecv(source=0, tag=2)
             data = req.wait()
+            if len(listeVoiture2) != 0:
+                print("le vehicule ,feu 2 " + listeVoiture2[0] + " passe ")
+                del listeVoiture2[0]
+            else:
+                print("pas de voiture au feu2")
 
+    '''if rank == 5:
+        i = 7;
+        j = 4;
+        while 1:
+            listeVoiture1.append("voiture " + str(i))
+            print("la voiture , voiture " + str(i) + " arrive au feu 1")
+            time.sleep(i)
+            i = i + 1
+            listeVoiture2.append("voiture " + str(j))
+            print("la voiture , voiture " + str(j) + " arrive au feu 2")
 
+            time.sleep(j)
+            j = j + 1
+        '''
     MPI.Finalize()
 
 if __name__ == '__main__':
