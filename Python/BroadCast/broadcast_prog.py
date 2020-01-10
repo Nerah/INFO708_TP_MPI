@@ -4,8 +4,10 @@ comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 
 if rank == 0:
-    data = {'key1' : [1,2, 3],
+
+    data = {'key1' : [1,2, 4],
             'key2' : ( 'abc', 'xyz')}
+	
 else:
     data = None
 
